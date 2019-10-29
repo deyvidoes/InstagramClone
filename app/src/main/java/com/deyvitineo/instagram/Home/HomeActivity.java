@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.deyvitineo.instagram.R;
 import com.deyvitineo.instagram.Utils.BottomNavigationViewHelper;
+import com.deyvitineo.instagram.Utils.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 

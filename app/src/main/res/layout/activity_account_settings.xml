@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/layout_center_viewpager"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,7 +27,7 @@
             android:layout_below="@id/relLayout2"
             android:layout_marginBottom="50dp">
 
-            <include layout="@layout/layout_center_accountsettings"/>
+            <include layout="@layout/layout_center_account_settings"/>
 
         </RelativeLayout>
 

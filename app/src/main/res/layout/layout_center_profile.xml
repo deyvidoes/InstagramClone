@@ -42,8 +42,9 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:id="@+id/profileImage"
-                        app:civ_border_width="2dp"
+                        app:civ_border_width="1dp"
                         app:civ_border_color="@color/black"
+                        android:src="@drawable/sample_profile"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
@@ -82,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/description"
                     android:textColor="@color/black"
-                    android:text="I live in New York, USA."
+                    android:text="Some random description here."
                     android:textSize="16sp"
                     android:layout_marginTop="5dp"/>
 
