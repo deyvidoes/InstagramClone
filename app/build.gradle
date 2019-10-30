@@ -37,4 +37,7 @@ dependencies {
     //Circle imageview for profile
     implementation 'de.hdodenhof:circleimageview:3.0.1'
 
+    //Universal image loader
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
 }

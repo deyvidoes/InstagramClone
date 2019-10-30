@@ -19,7 +19,6 @@
                 android:layout_marginTop="20dp"
                 app:civ_border_color="@color/black"
                 app:civ_border_width="1dp"
-                android:src="@drawable/sample_profile"
                 android:layout_centerHorizontal="true"/>
 
             <TextView
