@@ -3,6 +3,8 @@ package com.deyvitineo.instagram.Profile;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,13 +17,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.deyvitineo.instagram.R;
+import com.deyvitineo.instagram.Utils.BottomNavigationViewHelper;
 import com.deyvitineo.instagram.Utils.SectionsStatePagerAdapter;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import java.util.ArrayList;
 
 public class AccountSettingsActivity extends AppCompatActivity {
 
     private static final String TAG = "AccountSettingsActivity";
+    private static final int ACTIVITY_NUM = 4;
     private Context mContext;
     private SectionsStatePagerAdapter pagerAdapter;
     private ViewPager mViewPager;
@@ -35,6 +40,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: Started");
         setUpSettingsList();
         setUpFragments();
+        setUpBottomNavigationView();
 
         mViewPager = findViewById(R.id.container);
         mRelativeLayout = findViewById(R.id.relLayout1);
@@ -83,6 +89,19 @@ public class AccountSettingsActivity extends AppCompatActivity {
                 setViewPager(position);
             }
         });
+    }
+
+    /**
+     * BottomNavigationView setup
+     */
+    private void setUpBottomNavigationView(){
+        Log.d(TAG, "setUpBottomNavigationView: Setting up BottomNavigationView");
+        BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bottomNavViewBar);
+        BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
+        BottomNavigationViewHelper.enableNavigation(mContext, bottomNavigationViewEx);
+        Menu menu = bottomNavigationViewEx.getMenu();
+        MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
+        menuItem.setChecked(true);
     }
 
 }

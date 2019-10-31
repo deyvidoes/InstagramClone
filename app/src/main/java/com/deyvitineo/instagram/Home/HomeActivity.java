@@ -12,8 +12,10 @@ import android.view.MenuItem;
 import com.deyvitineo.instagram.R;
 import com.deyvitineo.instagram.Utils.BottomNavigationViewHelper;
 import com.deyvitineo.instagram.Utils.SectionsPagerAdapter;
+import com.deyvitineo.instagram.Utils.UniversalImageLoader;
 import com.google.android.material.tabs.TabLayout;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class HomeActivity extends AppCompatActivity {
     private static final String TAG = "HomeActivity";
@@ -26,9 +28,17 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Log.d(TAG, "onCreate: Starting");
+        initImageLoader();
         setUpBottomNavigationView();
         setupViewPager();
     }
+
+
+    private void initImageLoader(){
+        UniversalImageLoader universalImageLoader = new UniversalImageLoader(mContext);
+        ImageLoader.getInstance().init(universalImageLoader.getConfig());
+    }
+
     /**
      * Responsible for adding the 3 tabs (camera, home, messages) on top
      */
