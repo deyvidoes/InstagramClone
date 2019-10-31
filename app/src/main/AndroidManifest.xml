@@ -25,6 +25,8 @@
         <activity android:name=".Share.ShareActivity" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
         <activity android:name=".Profile.ProfileActivity" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
         <activity android:name=".Profile.AccountSettingsActivity" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Login.LoginActivity" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Login.RegisterActivity" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
