@@ -80,7 +80,7 @@
     <ProgressBar
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:id="@+id/progressBar"
+        android:id="@+id/registerProgressBar"
         android:layout_centerInParent="true"/>
     <TextView
         android:layout_width="wrap_content"
@@ -88,8 +88,9 @@
         android:text="Please wait..."
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_alignBottom="@id/progressBar"
-        android:layout_alignRight="@id/progressBar"
-        android:layout_alignLeft="@id/progressBar"/>
+        android:id="@+id/registerPleaseWait"
+        android:layout_alignBottom="@id/registerProgressBar"
+        android:layout_alignRight="@id/registerProgressBar"
+        android:layout_alignLeft="@id/registerProgressBar"/>
 
 </RelativeLayout>
